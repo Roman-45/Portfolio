@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Samuel Ngomituje</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+     <link rel="icon" type="image/png" href="./image/favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <span class="logo-text">Portfolio</span>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+          <a href="#home" class="nav-link active" data-section="home">Home</a>
+          <a href="#projects" class="nav-link" data-section="projects"
+            >Projects</a
+          >
+          <a
+            href="#certifications"
+            class="nav-link"
+            data-section="certifications"
+            >Certifications</a
+          >
+          <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+          <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+        </div>
+        <div class="nav-toggle" id="nav-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+      <canvas class="network-background" id="networkCanvas"></canvas>
+      <div class="floating-particles" id="particles"></div>
+      <div class="hero-content">
+        <div class="profile-container">
+          <div class="profile-ring">
+            <img
+              src="./image/Profile.jpeg"
+              alt="Profile"
+              class="profile-image"
+              id="profileImage"
+            />
+          </div>
+          <div class="status-indicator"></div>
+        </div>
+        <h1
+          class="hero-title"
+          data-text="Engineering Solutions, Managed with Strategy"
+        >
+          <span class="title-word">Engineering</span>
+          <span class="title-word">Solutions,</span>
+          <span class="title-word">Managed</span>
+          <span class="title-word">with</span>
+          <span class="title-word">Strategy</span>
+        </h1>
+        <p class="hero-subtitle typing-text"></p>
+
+        <div class="cert-scroller">
+          <div class="cert-item" data-delay="0">
+            <div class="ceh-shield"></div>
+            <span>PRINCE2® Foundation</span>
+          </div>
+          <div class="cert-item" data-delay="0.2">
+            <div class="ceh-shield"></div>
+            <span>Certified Ethical Hacker (CEH)</span>
+          </div>
+          <div class="cert-item" data-delay="0.4">
+            <div class="ceh-shield"></div>
+            <span>ISOC Network Security</span>
+          </div>
+        </div>
+
+        <div class="hero-cta">
+          <button
+            class="cta-button primary"
+            onclick="scrollToSection('projects')"
+          >
+            <span>View My Work</span>
+            <div class="button-particles"></div>
+          </button>
+          <button
+            class="cta-button secondary"
+            onclick="scrollToSection('contact')"
+          >
+            <span>Get In Touch</span>
+          </button>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+      <div class="section-header">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">
+          Innovative solutions showcasing technical expertise and strategic
+          thinking
+        </p>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card" data-project="traefik">
+          <div class="project-icon gateway-icon">
+            <div class="icon-glow"></div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Traefik Load Balancing</h3>
+            <p class="project-summary">
+              Multi-OS web infrastructure with Docker and Traefik for
+              intelligent load balancing
+            </p>
+            <div class="project-tags">
+              <span class="tag">Docker</span>
+              <span class="tag">Traefik</span>
+              <span class="tag">Load Balancing</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn-details" onclick="openProjectModal('traefik')">
+                View Details
+              </button>
+              <a
+                href="https://sheer-mangosteen-78e.notion.site/Final-Exam-1f9a0d6b921f8008a54df366a26772c6"
+                class="btn-external"
+                target="_blank"
+                >Documentation</a
+              >
+            </div>
+          </div>
+          <div class="project-overlay"></div>
+        </div>
+
+        <div class="project-card" data-project="auca">
+          <div class="project-icon mastercard-icon">
+            <span>MC</span>
+            <div class="icon-glow"></div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">AUCA Innovation Challenge</h3>
+            <p class="project-summary">
+              End-to-end management of fintech competition including grading
+              system development
+            </p>
+            <div class="project-tags">
+              <span class="tag">Project Management</span>
+              <span class="tag">Fintech</span>
+              <span class="tag">System Design</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn-details" onclick="openProjectModal('auca')">
+                View Details
+              </button>
+              <!-- <a
+                href="https://sheer-mangosteen-78e.notion.site/Final-Exam-1f9a0d6b921f8008a54df366a26772c6"
+                class="btn-external"
+                target="_blank"
+                >Documentation</a
+              > -->
+            </div>
+          </div>
+          <div class="project-overlay"></div>
+        </div>
+
+        <div class="project-card" data-project="un-dashboard">
+          <div class="project-icon globe-icon">
+            <div class="icon-glow"></div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">UN Big Data Dashboard</h3>
+            <p class="project-summary">
+              Data visualization platform for UN analytics with advanced
+              reporting capabilities
+            </p>
+            <div class="project-tags">
+              <span class="tag">Data Science</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">Analytics</span>
+            </div>
+            <div class="project-actions">
+              <button
+                class="btn-details"
+                onclick="openProjectModal('un-dashboard')"
+              >
+                View Details
+              </button>
+              <a
+                href="https://sheer-mangosteen-78e.notion.site/Temperature-Change-on-Land-African-Climate-Analysis-26ea0d6b921f8001b706d2173dcf5ed1?pvs=73"
+                class="btn-external"
+                target="_blank"
+                >Documentation</a
+              >
+              <a
+                href="https://github.com/Roman-45/temperature-change-analysis"
+                class="btn-external"
+                target="_blank"
+                >GitHub</a
+              >
+            </div>
+          </div>
+          <div class="project-overlay"></div>
+        </div>
+
+        <div class="project-card" data-project="coffee-system">
+          <div class="project-icon coffee-icon">
+            <div class="coffee-steam"></div>
+            <div class="icon-glow"></div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Java Coffee System</h3>
+            <p class="project-summary">
+              Enterprise coffee management system with Hibernate ORM integration
+            </p>
+            <div class="project-tags">
+              <span class="tag">Java</span>
+              <span class="tag">Hibernate</span>
+              <span class="tag">Enterprise</span>
+            </div>
+            <div class="project-actions">
+              <button
+                class="btn-details"
+                onclick="openProjectModal('coffee-system')"
+              >
+                View Details
+              </button>
+              <a
+                href="https://github.com/Roman-45/Cafe-Management-System"
+                class="btn-external"
+                target="_blank"
+                >GitHub</a
+              >
+            </div>
+          </div>
+          <div class="project-overlay"></div>
+        </div>
+
+        <div class="project-card" data-project="food-delivery">
+          <div class="project-icon phone-icon">
+            <div class="notification-dot"></div>
+            <div class="icon-glow"></div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Food Delivery App</h3>
+            <p class="project-summary">
+              Early front-end project mastering responsive HTML/CSS design
+            </p>
+            <div class="project-tags">
+              <span class="tag">HTML/CSS</span>
+              <span class="tag">Responsive</span>
+              <span class="tag">Frontend</span>
+            </div>
+            <div class="project-actions">
+              <button
+                class="btn-details"
+                onclick="openProjectModal('food-delivery')"
+              >
+                View Details
+              </button>
+              <a
+                href="https://github.com/Roman-45/Omni_delivery_food_site"
+                class="btn-external"
+                target="_blank"
+                >GitHub</a
+              >
+            </div>
+          </div>
+          <div class="project-overlay"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section" id="certifications">
+      <div class="section-header">
+        <h2 class="section-title">Professional Certifications</h2>
+        <p class="section-subtitle">
+          Validated expertise across security, management, and technology
+          domains
+        </p>
+      </div>
+      <div class="certifications-grid">
+        <div class="cert-seal prince2" data-cert="prince2">
+          <div class="cert-inner">
+            <span>PRINCE2®<br />Foundation</span>
+          </div>
+          <div class="cert-glow"></div>
+          <div class="tooltip">
+            Governance | Risk Management | Process Excellence
+            <br />
+            <strong>Issued by: Peoplecert</strong>
+          </div>
+        </div>
+        <div class="cert-seal ceh" data-cert="ceh">
+          <div class="cert-inner">
+            <span>Certified<br />Ethical Hacker</span>
+          </div>
+          <div class="cert-glow"></div>
+          <div class="tooltip">
+            Penetration Testing | Security Protocols | Vulnerability Assessment
+            <br />
+            <strong>Issued by: Ec-council</strong>
+          </div>
+        </div>
+        <div class="cert-seal isoc" data-cert="isoc">
+          <div class="cert-inner">
+            <span>ISOC Network<br />Security</span>
+          </div>
+          <div class="cert-glow"></div>
+          <div class="tooltip">
+            Security Principles | Best Practices | Network Defense <br />
+            <strong>Issued by: ICS2</strong>
+          </div>
+        </div>
+            <!-- New Certifications -->
+  <div class="cert-seal ceh" data-cert="ceh">
+    <div class="cert-inner">
+      <span>Soft Skills<br />Certification</span>
+    </div>
+    <div class="cert-glow"></div>
+    <div class="tooltip">
+      Emotional Intelligence | Communication | Teamwork <br />
+      <strong>Issued by: Article 26</strong>
+    </div>
+  </div>
+
+  <div class="cert-seal prince2" data-cert="ai-pm">
+    <div class="cert-inner">
+      <span>AI in Project<br />Management</span>
+    </div>
+    <div class="cert-glow"></div>
+    <div class="tooltip">
+      AI Tools | Agile + AI Integration | Predictive Analytics <br />
+      <strong>Issued by: Article 26</strong>
+    </div>
+  </div>
+
+  <div class="cert-seal isoc" data-cert="blockchain">
+    <div class="cert-inner">
+      <span>Cybersecurity for<br />Blockchain</span>
+    </div>
+    <div class="cert-glow"></div>
+    <div class="tooltip">
+      Blockchain Security | Cryptography | Smart Contract Protection <br />
+      <strong>Issued by: EC-Council</strong>
+    </div>
+  </div>
+</div>
+      </div>
+  
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+      <div class="section-header">
+        <h2 class="section-title">Technical Expertise</h2>
+        <p class="section-subtitle">
+          Comprehensive skill set spanning development, security, and strategic
+          management
+        </p>
+      </div>
+      <div class="skills-section">
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3 class="category-title">Development</h3>
+            <div class="skill-item" data-skill="90">
+              <div class="skill-info">
+                <span class="skill-name">Java & Hibernate</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress java" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-skill="85">
+              <div class="skill-info">
+                <span class="skill-name">Python & TensorFlow</span>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress python" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-skill="75">
+              <div class="skill-info">
+                <span class="skill-name">HTML/CSS & Frontend</span>
+                <span class="skill-percentage">75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress frontend" data-width="75"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="category-title">Management & Analysis</h3>
+            <div class="skill-item" data-skill="95">
+              <div class="skill-info">
+                <span class="skill-name">Project Management</span>
+                <span class="skill-percentage">95%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress pm" data-width="95"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-skill="85">
+              <div class="skill-info">
+                <span class="skill-name">Data Analysis & Power BI</span>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress data" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-skill="80">
+              <div class="skill-info">
+                <span class="skill-name">Cybersecurity</span>
+                <span class="skill-percentage">80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress security" data-width="80"></div>
+              </div>
+            </div>
+          </div>
+           <!-- Leadership & Communication -->
+    <div class="skill-category">
+      <h3 class="category-title">Leadership & Communication</h3>
+      <div class="skill-item" data-skill="95">
+        <div class="skill-info">
+          <span class="skill-name">Public Speaking</span>
+          <span class="skill-percentage">95%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress java" data-width="95"></div>
+        </div>
+      </div>
+      <div class="skill-item" data-skill="90">
+        <div class="skill-info">
+          <span class="skill-name">Leadership Skills</span>
+          <span class="skill-percentage">90%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress java" data-width="90"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <div class="section-header">
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">
+          Ready to discuss your next project or opportunity
+        </p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon email-icon"></div>
+            <div class="contact-details .go_to_email">
+              <h4>Email</h4>
+              <p>sam.ngomi100@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon linkedin-icon"></div>
+            <div class="contact-details go_to_linkedIn">
+              <h4>LinkedIn</h4>
+              <p>Ngomituje Samuel</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon github-icon"></div>
+            <div class="contact-details go_to_github">
+              <h4>GitHub</h4>
+              <p>Roman-45</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" required />
+              <label for="name">Your Names</label>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" required />
+              <label for="email">yourEmail@gmail.com</label>
+            </div>
+            <div class="form-group">
+              <textarea id="message" required></textarea>
+              <label for="message">Your Message</label>
+            </div>
+            <button type="submit" class="submit-btn">
+              <span>Send Message</span>
+              <div class="button-particles"></div>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div class="modal-overlay" id="projectModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="modalTitle"></h3>
+          <button class="modal-close" onclick="closeProjectModal()">
+            &times;
+          </button>
+        </div>
+        <div class="modal-body" id="modalBody">
+          <!-- Dynamic content will be inserted here -->
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

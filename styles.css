@@ -1210,8 +1210,16 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 15px 40px var(--shadow-glow);
 }
+ .footer-bottom {
+            border-top: 1px solid #555;
+            margin-top: 30px;
+            padding-top: 20px;
+            text-align: center;
+            color: #ccc;
+            font-size: 14px;
+        }
 
-/* ===== PROJECT MODAL ===== */
+/*  PROJECT MODAL  */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -1282,7 +1290,7 @@ body {
     padding: 2rem;
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
+/* RESPONSIVE DESIGN  */
 @media (max-width: 1024px) {
     .nav-menu {
         position: fixed;
@@ -1421,7 +1429,7 @@ body {
     }
 }
 
-/* ===== SCROLL ANIMATIONS ===== */
+/* Animations when scrolling */
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -1483,8 +1491,6 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(to bottom, var(--emerald-green), var(--electric-blue));
 }
-
-/* ===== SELECTION STYLES ===== */
 ::selection {
     background: var(--electric-blue);
     color: var(--bg-primary);

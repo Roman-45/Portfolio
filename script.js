@@ -537,6 +537,39 @@ const projectData = {
       "Established foundation for advanced web development",
     ],
   },
+  "pmp-exam": {
+    title: "PMP Exam Preparation Platform",
+    description:
+      "A full-stack web application designed to help professionals prepare for the PMP certification exam. Features a comprehensive question bank, timed practice tests, detailed explanations, and real-time progress tracking to maximize exam readiness.",
+    technologies: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "REST API",
+      "Railway (Deployment)",
+    ],
+    features: [
+      "User authentication and secure login",
+      "Extensive PMP question bank with categories",
+      "Timed mock exams simulating real test conditions",
+      "Detailed answer explanations and references",
+      "Progress tracking and performance analytics",
+      "Responsive design for desktop and mobile",
+    ],
+    challenges: [
+      "Designing a scalable question bank architecture",
+      "Implementing accurate exam timer and auto-submit logic",
+      "Building intuitive progress dashboards",
+      "Deploying and managing full-stack app on Railway",
+    ],
+    outcomes: [
+      "Delivered a production-ready exam platform",
+      "Improved PMP study experience for users",
+      "Demonstrated end-to-end full-stack development skills",
+      "Successfully deployed on Railway cloud infrastructure",
+    ],
+  },
 };
 
 function openProjectModal(projectKey) {
